@@ -47,6 +47,7 @@ AddScriptButton(BloxFruitsTab, "Xero Hub", "https://apixerohub.x10.mx/main.luarm
 AddScriptButton(BloxFruitsTab, "Raito Hub", "https://raw.githubusercontent.com/Efe0626/RaitoHub/refs/heads/main/Script")
 AddScriptButton(BloxFruitsTab, "Banana Hub", "https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaHub.lua")
 AddScriptButton(BloxFruitsTab, "Cokka Hub", "https://raw.githubusercontent.com/UserDevEthical/Loadstring/main/CokkaHub.lua")
+AddScriptButton(BloxFruitsTab, "Mukuro Hub", "https://auth.quartyz.com/scripts/Loader.lua")
 
 -- Mensagem inicial
 Rayfield:Notify({
