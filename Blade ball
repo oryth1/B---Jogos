@@ -44,8 +44,8 @@ AddScriptButton(InicioTab, "Fluxus Z Hub", "https://raw.githubusercontent.com/Fs
 AddScriptButton(InicioTab, "PitHubll X Hub", "https://raw.githubusercontent.com/SoyAdriYT/PitbullHubX/refs/heads/main/PitbullHubX.lua%22")
 AddScriptButton(InicioTab, "Waver Hub", "https://raw.githubusercontent.com/JoshSheesh/Waver-Full-Script/refs/heads/main/Protected_7926735646342814.txt%22%29%29%28%29")
 AddScriptButton(InicioTab, "Seeds Hub", "https://raw.githubusercontent.com/lolditto-q-u-m-u-u-qwq-idk/Seeds-NEXT--LOL/main/auto_parry___lol____________idk.lua%22%29%29%28%29")
-AddScriptButton(InicioTab, "Fade V3 Hub", "https://paste.gg/p/anonymous/e205c0dabb0a4e8ebcfbe0af34934280/files/bf814e270c334ddb8b4e79f664279499/raw")
-AddScriptButton(InicioTab, "Blade Ball Hub", "https://rawscripts.net/raw/Blade-Ball-Yuhhh-Yuhh-Free-Yuhhhhh-17457")
+AddScriptButton(InicioTab, "God Hub", "https://paste.gg/p/anonymous/e205c0dabb0a4e8ebcfbe0af34934280/files/bf814e270c334ddb8b4e79f664279499/raw")
+AddScriptButton(InicioTab, "Blade Ball Hub", "https://raw.githubusercontent.com/kiciahook/kiciahook/refs/heads/main/loader.lua")
 AddScriptButton(InicioTab, "Lunax Hub", "https://raw.githubusercontent.com/Alexisisback/Universall/refs/heads/main/Blade%20ball.lua")
 
 
