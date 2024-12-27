@@ -42,7 +42,7 @@ AddScriptButton(InicioTab, "FrostWare Hub", "https://raw.githubusercontent.com/F
 AddScriptButton(InicioTab, "Plutonium Hub", "https://raw.githubusercontent.com/PawsThePaw/Plutonium.AA/main/Plutonium.Loader.lua")
 AddScriptButton(InicioTab, "DarkRai Hub", "https://pastefy.app/y3MGGd9n/raw")
 AddScriptButton(InicioTab, "Flow Hub", "https://raw.githubusercontent.com/aviorety/Flow/refs/heads/main/Loader.lua")
-AddScriptButton(InicioTab, "God Hub", "https://paste.gg/p/anonymous/e205c0dabb0a4e8ebcfbe0af34934280/files/bf814e270c334ddb8b4e79f664279499/raw")
+AddScriptButton(InicioTab, "R4mpage Hub", "https://raw.githubusercontent.com/r4mpage4/LuaCom/refs/heads/main/improved.lua")
 AddScriptButton(InicioTab, "Blade Ball Hub", "https://raw.githubusercontent.com/kiciahook/kiciahook/refs/heads/main/loader.lua")
 AddScriptButton(InicioTab, "Lunax Hub", "https://raw.githubusercontent.com/Alexisisback/Universall/refs/heads/main/Blade%20ball.lua")
 
