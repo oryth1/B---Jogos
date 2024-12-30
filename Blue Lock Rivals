@@ -2,7 +2,7 @@ local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 -- Configuração da interface
 local Window = Rayfield:CreateWindow({
-    Name = "Oryh Hub | Universal BR | Blue Lock Rivals", 
+    Name = "Xethus Hub | Universal BR | Blue Lock Rivals", 
     LoadingTitle = "Carregando Blue Lock Rivals",
     LoadingSubtitle = "Por favor, aguarde...",
     ConfigurationSaving = {
@@ -37,10 +37,10 @@ end
 
 local BlueLockRivalsTab = Window:CreateTab("Blue Lock Rivals")
 
-AddScriptButton(BlueLockRivalsTab, "Legend HandlesYT Hub", "https://raw.githubusercontent.com/LOLking123456/Lock/refs/heads/main/Blue")
+
 AddScriptButton(BlueLockRivalsTab, "NS Hub", "https://raw.githubusercontent.com/OhhMyGehlee/fo/refs/heads/main/ot")
 AddScriptButton(BlueLockRivalsTab, "Tora Isme Hub", "https://raw.githubusercontent.com/ToraScript/Script/main/BlueLock")
-AddScriptButton(BlueLockRivalsTab, "Hub Sendox", "https://api.luarmor.net/files/v3/loaders/2f4e30b1511c2c07bee1be782460a57a.lua")
+
 AddScriptButton(BlueLockRivalsTab, "Flow Hub", "https://pastebin.com/raw/D1M2PLua")
 AddScriptButton(BlueLockRivalsTab, "Drag-me Hub", "https://gist.githubusercontent.com/Yopapa7/8f9c43ed1a16ba4dbb5464e169154e65/raw/bdc9d6f650c829f470b6c4c05e66fbc5f7efc92e/gistfile1.txt")
 AddScriptButton(BlueLockRivalsTab, "Rinns Hub", "https://raw.githubusercontent.com/SkibidiCen/MainMenu/main/Code")
