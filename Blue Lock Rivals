@@ -37,8 +37,7 @@ end
 
 local BlueLockRivalsTab = Window:CreateTab("Blue Lock Rivals")
 
-AddScriptButton(BlueLockRivalsTab, "Arbix Hub", "https://raw.githubusercontent.com/Youifpg/Blue-lock/refs/heads/main/TOUKA.lua%22%29%29%28%29")
-AddScriptButton(BlueLockRivalsTab, "AR Blx Hub", "https://raw.githubusercontent.com/Youifpg/Blue-lock/refs/heads/main/TOUKA.lua")
+AddScriptButton(BlueLockRivalsTab, "Arbix Hub", "https://raw.githubusercontent.com/Youifpg/Blue-lock/refs/heads/main/TOUKA.lua")
 AddScriptButton(BlueLockRivalsTab, "Tora Isme Hub", "https://raw.githubusercontent.com/ToraScript/Script/main/BlueLock")
 AddScriptButton(BlueLockRivalsTab, "NS Hub", "https://raw.githubusercontent.com/OhhMyGehlee/fo/refs/heads/main/ot")
 AddScriptButton(BlueLockRivalsTab, "Flow Hub", "https://pastebin.com/raw/D1M2PLua")
