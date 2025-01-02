@@ -35,8 +35,9 @@ end
 
 -- >[Blox Fruits]<
 
-local BloxFruitsTab = Window:CreateTab("Blox Fruits")
+local BloxFruitsTab = Window:CreateTab("Blox Fruits Scripts")
 
+AddScriptButton(BloxFruitsTab, "BT Hub", "https://lua-library.btteam.net/script-auth.txt")
 AddScriptButton(BloxFruitsTab, "Alchemy Hub", "https://scripts.alchemyhub.xyz")
 AddScriptButton(BloxFruitsTab, "Speed X Hub", "https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua")
 AddScriptButton(BloxFruitsTab, "Kncryptc Hub", "https://raw.githubusercontent.com/3345-catsus/Kncrypt/refs/heads/main/sources/BloxFruit.lua")
