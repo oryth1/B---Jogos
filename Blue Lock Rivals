@@ -4,28 +4,79 @@ local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
     Name = "Xethus Hub | Universal BR | Blue Lock Rivals", 
     LoadingTitle = "Carregando Blue Lock Rivals",
-    LoadingSubtitle = "Por favor, aguarde...",
-    ConfigurationSaving = {
-        Enabled = true,
-        FolderName = "OryhHubConfigs", -- Pasta para salvar configurações
-        FileName = "UniversalScript"
-    },
-    Discord = {
-        Enabled = false,
-        Invite = "", -- Adicione um convite do Discord se necessário
-        RememberJoins = true
-    },
-    KeySystem = false -- Sistema de chave desativado
+    LoadingSubtitle = "Gerando Scripts..."
 })
 
--- Função para criar botões que executam scripts
+-- Caminho para a pasta de configurações
+local ConfigFolder = "Blue Lock Rivals"
+if not isfolder(ConfigFolder) then
+    makefolder(ConfigFolder)
+end
+
+local ConfigFile = ConfigFolder .. "/Blue Lock Rivals.json"
+
+-- Variáveis globais
+local SelectedScript = nil
+local AutoExecute = false
+local Scripts = {
+
+    ["ArbiX Hub"] = "https://raw.githubusercontent.com/Youifpg/Blue-lock/refs/heads/main/TOUKA.lua",
+    ["Tora Isme Hub"] = "https://raw.githubusercontent.com/ToraScript/Script/main/BlueLock",
+    ["NS Hub"] = "https://raw.githubusercontent.com/OhhMyGehlee/fo/refs/heads/main/ot",
+    ["Flow Hub"] = "https://pastebin.com/raw/D1M2PLua",
+    ["Drag me Hub"] = "https://gist.githubusercontent.com/Yopapa7/8f9c43ed1a16ba4dbb5464e169154e65/raw/bdc9d6f650c829f470b6c4c05e66fbc5f7efc92e/gistfile1.t",
+    ["Rinns Hub"] = "https://raw.githubusercontent.com/SkibidiCen/MainMenu/main/Code",
+    ["Kaos X Hub"] = "https://raw.githubusercontent.com/KaosX-Scripts/Loader/refs/heads/main/Key-yAdQ8gjds/mDuh309nvc",
+}
+
+-- Função para salvar configurações
+local function SaveSettings()
+    writefile(ConfigFile, game:GetService("HttpService"):JSONEncode({
+        SelectedScript = SelectedScript,
+        AutoExecute = AutoExecute
+    }))
+end
+
+-- Função para carregar configurações
+local function LoadSettings()
+    if isfile(ConfigFile) then
+        local settings = game:GetService("HttpService"):JSONDecode(readfile(ConfigFile))
+        SelectedScript = settings.SelectedScript
+        AutoExecute = settings.AutoExecute
+    end
+end
+
+-- Carregar configurações ao iniciar
+LoadSettings()
+
+-- Criar a aba "Scripts"
+local TabScripts = Window:CreateTab("Scripts", "Scroll")
+
+-- Toggle para Auto-Execute
+TabScripts:CreateToggle({
+    Name = "Auto-Execute",
+    CurrentValue = AutoExecute,
+    Callback = function(value)
+        AutoExecute = value
+        SaveSettings()
+        Rayfield:Notify({
+            Title = "Configuração Atualizada",
+            Content = AutoExecute and "Auto-Execute ativado" or "Auto-Execute desativado",
+            Duration = 5
+        })
+    end
+})
+
+-- Função para adicionar botões com scripts
 local function AddScriptButton(tab, name, url)
     tab:CreateButton({
         Name = name,
         Callback = function()
+            SelectedScript = url
             loadstring(game:HttpGet(url))()
+            SaveSettings()
             Rayfield:Notify({
-                Title = "Oryh Hub",
+                Title = "Xethus Hub",
                 Content = name .. " carregado com sucesso!",
                 Duration = 5
             })
@@ -33,20 +84,78 @@ local function AddScriptButton(tab, name, url)
     })
 end
 
--- >[Blue Lock Rivals]<
+-- Adicionar botões para os Scripts
+for name, url in pairs(Scripts) do
+    AddScriptButton(TabScripts, name, url)
+end
 
-local BlueLockRivalsTab = Window:CreateTab("Blue Lock Rivals")
+-- Execução automática no início, se ativado
+if AutoExecute and SelectedScript then
+    local success, errorMsg = pcall(function()
+        loadstring(game:HttpGet(SelectedScript))()
+    end)
+    if success then
+        Rayfield:Notify({
+            Title = "Auto-Execute",
+            Content = "Script executado automaticamente com sucesso!",
+            Duration = 5
+        })
+    else
+        Rayfield:Notify({
+            Title = "Erro no Auto-Execute",
+            Content = "Erro ao executar o script: " .. errorMsg,
+            Duration = 5
+        })
+    end
+end
 
-AddScriptButton(BlueLockRivalsTab, "Arbix Hub", "https://raw.githubusercontent.com/Youifpg/Blue-lock/refs/heads/main/TOUKA.lua")
-AddScriptButton(BlueLockRivalsTab, "Tora Isme Hub", "https://raw.githubusercontent.com/ToraScript/Script/main/BlueLock")
-AddScriptButton(BlueLockRivalsTab, "NS Hub", "https://raw.githubusercontent.com/OhhMyGehlee/fo/refs/heads/main/ot")
-AddScriptButton(BlueLockRivalsTab, "Flow Hub", "https://pastebin.com/raw/D1M2PLua")
-AddScriptButton(BlueLockRivalsTab, "Drag-me Hub", "https://gist.githubusercontent.com/Yopapa7/8f9c43ed1a16ba4dbb5464e169154e65/raw/bdc9d6f650c829f470b6c4c05e66fbc5f7efc92e/gistfile1.txt")
-AddScriptButton(BlueLockRivalsTab, "Rinns Hub", "https://raw.githubusercontent.com/SkibidiCen/MainMenu/main/Code")
-AddScriptButton(BlueLockRivalsTab, "Kaos X Hub", "https://raw.githubusercontent.com/KaosX-Scripts/Loader/refs/heads/main/Key-yAdQ8gjds/mDuh309nvc")
--- Mensagem inicial
+-- Criar a aba "Admins" com o ícone "icon-cable"
+local AdminTab = Window:CreateTab("Admins", "expand")
+
+-- Adicionar botões para scripts de Admin
+AddScriptButton(AdminTab, "</> Aimbot", "https://raw.githubusercontent.com/Yousuck780/troll-x/main/ahhhh")
+AddScriptButton(AdminTab, "</> Graficos Realistas", "https://raw.githubusercontent.com/Flybobbb/robloxscripts/main/rtx.lua")
+AddScriptButton(AdminTab, "</> Infinite Yield", "https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source")
+AddScriptButton(AdminTab, "</> Retirar Texturas", "https://rawscripts.net/raw/Universal-Script-antilag-15462")
+AddScriptButton(AdminTab, "</> Servidor Privado", "https://pastebin.com/raw/A4r1pHJY")
+AddScriptButton(AdminTab, "</> TP Tools", "https://pastebin.com/raw/qysTtrJD")
+
+-- Criar a aba "Redes Sociais"
+local SocialTab = Window:CreateTab("Redes Sociais","link")
+
+-- Adicionar botões para redes sociais
+SocialTab:CreateButton({
+    Name = "Discord Community",
+    Callback = function()
+        setclipboard("https://discord.gg/UTchgb5sY4")
+    end
+})
+
+SocialTab:CreateButton({
+    Name = "Instagram para Contato",
+    Callback = function()
+        setclipboard("https://www.instagram.com/hidleywilliam")
+    end
+})
+
+SocialTab:CreateButton({
+    Name = "Canal no YouTube",
+    Callback = function()
+        setclipboard("https://www.youtube.com/channel/UCX2N85bLl1JwWsb9wQ1NxHg")
+    end
+})
+
+SocialTab:CreateButton({
+    Name = "Executores Atualizados",
+    Callback = function()
+        setclipboard("https://beacons.ai/ethus.oi")
+    end
+})
+
+
+-- Notificação inicial
 Rayfield:Notify({
-    Title = "Blue Lock Rivals",
-    Content = "Carregando scripts...",
+    Title = "Xethus Hub",
+    Content = "Scripts atualizados com sucesso!",
     Duration = 5
 })
