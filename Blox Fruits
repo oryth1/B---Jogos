@@ -32,6 +32,7 @@ local Scripts = {
     ["Cocca Hub"] = "https://raw.githubusercontent.com/UserDevEthical/Loadstring/main/CokkaHub.lua",
     ["Mukuro Hub"] = "https://auth.quartyz.com/scripts/Loader.lua",
     ["Min Hub"] = "https://raw.githubusercontent.com/Zunes-Bypassed/NOPE/main/Min.lua",
+    ["Ronix Hub"] = "https://api.luarmor.net/files/v3/loaders/513ccdb3ae8a61d4d7698fc337e5256d.lua",
 }
 
 -- Função para salvar configurações
