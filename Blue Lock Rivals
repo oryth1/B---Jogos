@@ -19,7 +19,7 @@ local ConfigFile = ConfigFolder .. "/Blue Lock Rivals.json"
 local SelectedScript = nil
 local AutoExecute = false
 local Scripts = {
-
+    ["BLR Hub"] = "https://raw.githubusercontent.com/Maybie/BlueLock/refs/heads/main/BLR.lua",
     ["ArbiX Hub"] = "https://raw.githubusercontent.com/Youifpg/Blue-lock/refs/heads/main/TOUKA.lua",
     ["Tora Isme Hub"] = "https://raw.githubusercontent.com/ToraScript/Script/main/BlueLock",
     ["NS Hub"] = "https://raw.githubusercontent.com/OhhMyGehlee/fo/refs/heads/main/ot",
