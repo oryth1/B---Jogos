@@ -19,6 +19,7 @@ local ConfigFile = ConfigFolder .. "/BloxFruits.json"
 local SelectedScript = nil
 local AutoExecute = false
 local Scripts = {
+    ["Ronix Hub"] = "https://api.luarmor.net/files/v3/loaders/513ccdb3ae8a61d4d7698fc337e5256d.lua",
     ["W-Azure"] = "https://pastebin.com/raw/Zxp1wzLw",
     ["Redz Hub"] = "https://raw.githubusercontent.com/realredz/BloxFruits/refs/heads/main/Source.lua",
     ["BT Hub"] = "https://lua-library.btteam.net/script-auth.txt",
