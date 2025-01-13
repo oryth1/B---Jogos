@@ -19,6 +19,7 @@ local ConfigFile = ConfigFolder .. "/Blue Lock Rivals.json"
 local SelectedScript = nil
 local AutoExecute = false
 local Scripts = {
+    ["Synnh"] = "https://pastefy.app/5i2DScDc/raw",
     ["Express Hub"] = "https://raw.githubusercontent.com/Theyfwdan/Theyfwdan/refs/heads/main/ExpressHubPaidVersion",
     ["Custom Hub"] = "https://raw.githubusercontent.com/Bhusant/Tdu-refined/refs/heads/main/SigmaBoi",
     ["Sendox Hub"] = "https://raw.githubusercontent.com/Mc4121ban/RobloxScirpt/refs/heads/main/ScriptHub",
